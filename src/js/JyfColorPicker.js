@@ -18,18 +18,21 @@ const PRESET_COLORS = [
   '#ffffff'
 ]
 
+const defaultOption = {
+  color: 'rgb(0,0,255)',
+  type: 'tinypicker'
+}
+
 class JyfColorPicker {
-  constructor(wrapper, option={
-    color: 'rgb(0,0,255)'
-  }){
+  constructor(wrapper, option = defaultOption){
     this._option = option;
     this._initColor(option.color);
     this.ui = new UI(wrapper, {
       presetColors: PRESET_COLORS,
       hsv: this.hsv,
+      type: option.type,  
       onChange: this.handleHsvChange
     })
-    
   }
 
   // 
@@ -39,6 +42,16 @@ class JyfColorPicker {
       throw Error('option.color 不是一个有效的颜色值, 你可以传入 #ff0000 rgba(255,255,255,0.5) ...')
     }
     this.hsv = color.toHsv();
+  }
+
+  // 对外暴露的option 只读
+  publicOption = defaultOption;
+  get publicOption(){
+    return this._option;
+  }
+
+  set publicOption(val){
+    this._option = val;
   }
 
   _isVisible = false

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>jyf-color-picker</title>
-  <script src="../dist/jyf-color-picker.js"></script>
+  <script src="../lib/umd/jyf-color-picker.min.js"></script>
 </head>
 
 <body>
@@ -45,6 +45,7 @@
     var jyfBox = document.querySelector('.jyf-color-box');
     var Picker = new JyfColorPicker(jyfBox, {
       color: initColor,
+      type: 'lightpicker',
       onChange: function(color){
         jyfBox.style.background = color.toRgbString()
       }
