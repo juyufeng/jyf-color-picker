@@ -1,12 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jyf-color-picker</title>
+  <title>jyf-color-picker 演示</title>
   <script src="../lib/umd/jyf-color-picker.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      height: 60vh;
+      text-align: center;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      position: relative;
+    }
+
+    h1 {
+      color: #42b983;
+      text-align: center;
+    }
+
+    .demo {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.8em;
+    }
+
+    a {
+      color: #42b983;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
@@ -14,56 +59,70 @@
     .jyf-color-wrapper {
       display: flex;
       position: absolute;
-      left: 50%;
+      right: 10%;
       top: 10%;
     }
+
     .jyf-color-wrapper span {
       display: inline-block;
       width: 120px;
       user-select: none;
     }
+
     .jyf-color-box {
       padding: 10px 20px;
       border-radius: 2px;
       outline: 1px solid #ccc;
       outline-offset: 4px;
     }
+
     img {
       display: block;
       width: 100%;
     }
   </style>
+  <div class="container">
+    <h1>jyf-color-picker 演示</h1>
+    <p>这是一个用纯JavaScript编写的颜色选择器，无需依赖任何UI框架。</p>
 
-    <div class="jyf-color-wrapper">
-      <label class="btn">点击我打开：</label>  
-      <div class="jyf-color-box"></div>
+    <!-- 假设这里是你的颜色选择器演示代码 -->
+    <div class="demo">
+
+      <div class="jyf-color-wrapper">
+        <label style="margin-right: 20px;" class="btn">点击这里</label>
+        <div class="jyf-color-box"></div>
+      </div>
+      <script>
+
+        var initColor = 'rgba(255,0,255,0.5)' // #7ed321
+        var btn = document.querySelector('.btn');
+        var jyfBox = document.querySelector('.jyf-color-box');
+        var Picker = new JyfColorPicker(jyfBox, {
+          color: initColor,
+          type: 'darkpicker',
+          onChange: function (color) {
+            jyfBox.style.background = color.toRgbString()
+          }
+        })
+
+        jyfBox.style.background = initColor;
+        jyfBox.addEventListener('click', function () {
+          // 通过visible 控制可见
+          var visible = Picker.visible;
+          Picker.visible = !visible
+          btn.innerText = !visible ? 'clickHereClose：' : 'clickHereOpen：'
+        })
+
+        // Picker.destroy()
+      </script>
+
+
     </div>
-  <script>
 
-    var initColor = 'rgba(255,0,255,0.5)' // #7ed321
-    var btn = document.querySelector('.btn');
-    var jyfBox = document.querySelector('.jyf-color-box');
-    var Picker = new JyfColorPicker(jyfBox, {
-      color: initColor,
-      type: 'lightpicker',
-      onChange: function(color){
-        jyfBox.style.background = color.toRgbString()
-      }
-    })
-
-    jyfBox.style.background = initColor;
-    jyfBox.addEventListener('click', function(){
-      // 通过visible 控制可见
-      var visible = Picker.visible;
-      Picker.visible = !visible
-      btn.innerText = !visible ? '点击我关闭：' : '点击我打开：'
-    })
-
-    // Picker.destroy()
-  </script>
-
-
-
+    <footer>
+      <p>喜欢这个项目吗？请访问我们的<a href="https://github.com/juyufeng/jyf-color-picker">GitHub页面</a>，并给我们点个赞！你的支持是我们前进的动力。</p>
+    </footer>
+  </div>
 </body>
 
 </html>

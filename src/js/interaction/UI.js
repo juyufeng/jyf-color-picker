@@ -1,6 +1,7 @@
 import JyfColorCrafter from "jyf-color-crafter";
 import TinyPicker from '@/template/TinyPicker'
 import LightPicker from '@/template/LightPicker'
+import DarkPicker from '@/template/DarkPicker'
 import Jyfpad from './Jyfpad'
 import PresetColorButtons from './PresetColorButtons'
 import HueSlider from './HueSlider'
@@ -43,6 +44,8 @@ class UI {
   _makeUiElement() {
     if (this.type === 'lightpicker') {
       PREFIX = 'jyf-color-lightpicker'
+    }else if(this.type === 'darkpicker'){
+      PREFIX = 'jyf-color-darkpicker'
     }else{
       PREFIX = 'jyf-color-picker'
     }
@@ -52,6 +55,10 @@ class UI {
     element.style = 'display: none;'
     if(this.type === 'lightpicker'){
       element.innerHTML = LightPicker({
+        prefix: PREFIX
+      });
+    }else if(this.type === 'darkpicker'){
+      element.innerHTML = DarkPicker({
         prefix: PREFIX
       });
     }else{

@@ -1,44 +1,44 @@
-.jyf-color-lightpicker__wrapper {
+.jyf-color-darkpicker__wrapper {
   position: absolute;
   z-index: 1000;
 }
-.jyf-color-lightpicker {
+.jyf-color-darkpicker {
   width: 220px;
   padding: 10px 10px 0px;
   box-sizing: border-box;
-  background: lightblue;
+  background: black;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px, rgba(0, 0, 0, 0.15) 0px 8px 16px;
   user-select: none;
 }
 
-.jyf-color-lightpicker__jyfpad {
+.jyf-color-darkpicker__jyfpad {
   width: 100%;
   padding-bottom: 75%;
   position: relative;
   overflow: hidden;
 }
-.jyf-color-lightpicker__jyfpad—saturation {
+.jyf-color-darkpicker__jyfpad—saturation {
   position: absolute;
   inset: 0;
   background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
 }
-.jyf-color-lightpicker__jyfpad—value {
+.jyf-color-darkpicker__jyfpad—value {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
 }
 
-.jyf-color-lightpicker__flexbox {
+.jyf-color-darkpicker__flexbox {
   display: flex;
 }
-.jyf-color-lightpicker__gridbox {
+.jyf-color-darkpicker__gridbox {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 6px;
   text-align: center;
 }
-.jyf-color-lightpicker__gridbox input {
+.jyf-color-darkpicker__gridbox input {
   width: 80%;
   padding: 4px 10% 3px;
   border: none;
@@ -46,7 +46,7 @@
   font-size: 11px;
   text-align: inherit;
 }
-.jyf-color-lightpicker__gridbox label {
+.jyf-color-darkpicker__gridbox label {
   display: block;
   font-size: 11px;
   color: rgb(34, 34, 34);
@@ -54,31 +54,31 @@
   padding-bottom: 4px;
   text-transform: capitalize;
 }
-.jyf-color-lightpicker__hue {
+.jyf-color-darkpicker__hue {
   position: relative;
   height: 10px;
   
 }
-.jyf-color-lightpicker__hue-bg {
+.jyf-color-darkpicker__hue-bg {
   position: absolute;
   inset: 0px;
   background: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%);
 }
-.jyf-color-lightpicker__transparency {
+.jyf-color-darkpicker__transparency {
   position: relative;
   height: 10px;
   margin-top: 4px;
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAADFJREFUOE9jZGBgEGHAD97gk2YcNYBhmIQBgWSAP52AwoAQwJvQRg1gACckQoC2gQgAIF8IscwEtKYAAAAASUVORK5CYII=") left center;
   
 }
-.jyf-color-lightpicker__transparency-bg {
+.jyf-color-darkpicker__transparency-bg {
   position: absolute;
   inset: 0px;
 }
-.jyf-color-lightpicker__handler {
+.jyf-color-darkpicker__handler {
   position: absolute;
 }
-.jyf-color-lightpicker__handler::after{
+.jyf-color-darkpicker__handler::after{
   content: '';
   display: block;
   width: 4px;
@@ -88,7 +88,7 @@
   background: rgb(255, 255, 255);
   transform: translateX(-2px);
 }
-.jyf-color-lightpicker__circle-handler {
+.jyf-color-darkpicker__circle-handler {
   width: 4px;
   height: 4px;
   box-shadow: rgb(255, 255, 255) 0px 0px 0px 1.5px, rgba(0, 0, 0, 0.3) 0px 0px 1px 1px inset, rgba(0, 0, 0, 0.4) 0px 0px 1px 2px;
@@ -96,7 +96,7 @@
   transform: translate(-2px, -2px);
   position: absolute;
 }
-.jyf-color-lightpicker__color {
+.jyf-color-darkpicker__color {
   position: relative;
   width: 24px;
   height: 24px;
@@ -105,30 +105,30 @@
   border-radius: 3px;
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAADFJREFUOE9jZGBgEGHAD97gk2YcNYBhmIQBgWSAP52AwoAQwJvQRg1gACckQoC2gQgAIF8IscwEtKYAAAAASUVORK5CYII=") left center;
 }
-.jyf-color-lightpicker__color-bg{
+.jyf-color-darkpicker__color-bg{
   position: absolute;
   inset: 0px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.25) 0px 0px;
 }
 
-.jyf-color-lightpicker__color-Hex {
+.jyf-color-darkpicker__color-Hex {
   flex: 2 1 0%;
 }
-.jyf-color-lightpicker__color-R,
-.jyf-color-lightpicker__color-G,
-.jyf-color-lightpicker__color-B,
-.jyf-color-lightpicker__color-A {
+.jyf-color-darkpicker__color-R,
+.jyf-color-darkpicker__color-G,
+.jyf-color-darkpicker__color-B,
+.jyf-color-darkpicker__color-A {
   flex: 1 1 0%;
 }
 
-.jyf-color-lightpicker__preset {
+.jyf-color-darkpicker__preset {
   flex-wrap: wrap;
   margin: 0px -10px;
   padding: 10px 0px 0px 10px;
   border-top: 1px solid rgb(238, 238, 238);
 }
 
-.jyf-color-lightpicker__preset div {
+.jyf-color-darkpicker__preset div {
   width: 16px;
   height: 16px;
   margin: 0px 10px 10px 0px;
