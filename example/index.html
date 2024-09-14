@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jyf-color-picker</title>
+  <script src="../dist/jyf-color-picker.js"></script>
+</head>
+
+<body>
+  <style>
+    .jyf-color-wrapper {
+      display: flex;
+      position: absolute;
+      left: 50%;
+      top: 10%;
+    }
+    .jyf-color-wrapper span {
+      display: inline-block;
+      width: 120px;
+      user-select: none;
+    }
+    .jyf-color-box {
+      padding: 10px 20px;
+      border-radius: 2px;
+      outline: 1px solid #ccc;
+      outline-offset: 4px;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  </style>
+
+    <div class="jyf-color-wrapper">
+      <label class="btn">点击我打开：</label>  
+      <div class="jyf-color-box"></div>
+    </div>
+  <script>
+
+    var initColor = 'rgba(255,0,255,0.5)' // #7ed321
+    var btn = document.querySelector('.btn');
+    var jyfBox = document.querySelector('.jyf-color-box');
+    var Picker = new JyfColorPicker(jyfBox, {
+      color: initColor,
+      onChange: function(color){
+        jyfBox.style.background = color.toRgbString()
+      }
+    })
+
+    jyfBox.style.background = initColor;
+    jyfBox.addEventListener('click', function(){
+      // 通过visible 控制可见
+      var visible = Picker.visible;
+      Picker.visible = !visible
+      btn.innerText = !visible ? '点击我关闭：' : '点击我打开：'
+    })
+
+    // Picker.destroy()
+  </script>
+
+
+
+</body>
+
+</html>
