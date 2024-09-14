@@ -1,4 +1,4 @@
-import UI from '@/js/ui/UI';
+import UI from '@/js/interaction/UI';
 import JyfColorCrafter from "jyf-color-crafter";
 const PRESET_COLORS = [
   '#d0021b',

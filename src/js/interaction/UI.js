@@ -1,5 +1,5 @@
 import JyfColorCrafter from "jyf-color-crafter";
-import generateTemplate from '@/js/ui/template'
+import generateTemplate from '@/template/TinyPicker'
 
 import Jyfpad from './Jyfpad'
 import PresetColorButtons from './PresetColorButtons'
