@@ -1,6 +1,3 @@
-当然，这里是将之前提供的内容转换为Markdown格式的完整字符串：
-
-```markdown
 ### `jyf-color-picker`
 
 #### 概览
@@ -46,14 +43,9 @@ npm build
 - `onChange`: 颜色改变时的回调函数。
 
 #### 贡献
-我们欢迎任何形式的贡献，无论是代码、文档还是建议。如果你有兴趣参与到 `jyf-color-picker` 的开发中来，请查看我们的 [贡献指南](https://github.com/yourusername/jyf-color-picker/blob/master/CONTRIBUTING.md)。
+我们欢迎任何形式的贡献，无论是代码、文档还是建议。如果你有兴趣参与到 `jyf-color-picker` 的开发中来
 
 #### 许可证
-`jyf-color-picker` 是在 [MIT许可证](https://github.com/yourusername/jyf-color-picker/blob/master/LICENSE) 下发布的，这意味着你可以自由地使用、修改和分发它，只需保留原作者的版权声明和许可证声明。
-
----
+`jyf-color-picker` 是在 [MIT许可证](https://github.com/juyufeng/jyf-color-picker/LICENSE) 下发布的，这意味着你可以自由地使用、修改和分发它，只需保留原作者的版权声明和许可证声明。
 
 以上就是对 `jyf-color-picker` 的详细介绍和使用方法。如果你有任何疑问或需要进一步的帮助，请随时联系我们。
-```
-
-这个字符串包含了之前讨论的所有部分，并且已经格式化为Markdown，可以直接在支持Markdown的编辑器或平台上使用。
